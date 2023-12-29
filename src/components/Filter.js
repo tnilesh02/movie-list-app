@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export default function Filter({ setGenre }) {
     const genres = {
+        0: "All",
         28: "Action",
         35: "Comedy",
         27: "Horror",
@@ -16,8 +17,7 @@ export default function Filter({ setGenre }) {
         16: "Animation",
         10751: "Family",
         12: "Adventure",
-        9648: "Mystery",
-
+        9648: "Mystery"
     }
     const [curr, setCurr] = useState([0]);
     const handleGenreChange = (code) => {
@@ -47,7 +47,7 @@ export default function Filter({ setGenre }) {
         <div className="section filter-section">
             <div className="container filter">
                 {
-                    Object.keys(genres).map((item) => <button key={item} onClick={() => handleGenreChange(item)} className={`filter-button ${curr.includes(item) ? "filter-active" : ""}`}>{genres[item]}</button>)
+                    Object.keys(genres).map((item) => <button key={item} onClick={() => handleGenreChange(Number(item))} className={`filter-button ${curr.includes(Number(item)) ? "filter-active" : ""}`}>{genres[item]}</button>)
                 }               
             </div>
         </div>

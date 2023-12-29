@@ -9,10 +9,13 @@ export default function MovieList({ genre, year, movies }) {
                 <div className="movielist-list">
                     {movies.filter((item) => {
                         if(genre.includes(0)){
+                            
                             return true;
                         }
                         for(let x of genre){
-                            //console.log(x);
+                            if(x === 0 ){
+                                return true;
+                            }
                             if(!item.genre_ids.includes(x)){
                                 return false;
                             }
