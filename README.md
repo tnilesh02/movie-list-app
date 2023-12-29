@@ -8,4 +8,3 @@ just clone this repo and do ```npm install``` and then run ```npm start```
 - Displaying list of movies in descending order of their popularity
 - Each movie card containing title, rating, and genres of the movie
 - You can filter the movies based on genres using filter at the top
-- 
