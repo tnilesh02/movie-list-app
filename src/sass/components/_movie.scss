@@ -1,0 +1,65 @@
+.movie-box {
+    height: 33rem;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-x: hidden;
+    padding: 1rem;
+    
+    @include respond(tab-land) {
+        height: 36rem;
+    }
+
+    @include respond(tab-port) {
+        height: 40rem;
+    }
+
+    .movie-title {
+        color: white;
+        background-color: transparent;
+        font-size: 1.6rem;
+        font-family: $title-font;
+
+        @include respond(tab-land) {
+            font-size: 1.8rem;
+        }
+    
+        @include respond(tab-port) {
+            font-size: 2rem;
+        }
+
+        @include respond(phone) {
+            font-size: 2.2rem;
+        }
+    }
+
+    .movie-rating {
+        color: rgb(240, 218, 197);
+        background-color: transparent;
+        font-size: 1.2rem;
+
+        @include respond(tab-land) {
+            font-size: 1.4rem;
+        }
+    
+        @include respond(tab-port) {
+            font-size: 1.6rem;
+        }
+
+        @include respond(phone) {
+            font-size: 1.8rem;
+        }
+    }
+
+    .movie-genre {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        
+        span:not(:last-child) {
+            margin-right: .5rem;
+        }
+    }
+}

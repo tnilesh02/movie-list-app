@@ -1,0 +1,9 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './base.scss';
+
+@import './Layout/header';
+@import './Layout/movielist';
+
+@import './components/movie';
+@import './components/filter';

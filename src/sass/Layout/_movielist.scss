@@ -1,0 +1,64 @@
+.movielist-section {
+    padding: 1rem;
+    
+    &:first-child {
+        padding-top: 12rem;
+        @include respond(tab-port) {
+            padding-top: 14rem;
+        }
+    }
+
+    .movielist {
+        max-width: 100rem;
+        margin: auto;
+
+        @include respond(tab-port) {
+            width: 100%;
+        }
+
+        &-year {
+            font-size: 2.5rem;
+            color: white;
+            font-family: $title-font;
+            font-weight: 600;
+            margin-bottom: 1.4rem;
+
+            @include respond(tab-land) {
+                font-size: 2.7rem;
+            }
+
+            @include respond(tab-port) {
+                font-size: 2.9rem;
+            }
+
+            @include respond(phone) {
+                font-size: 3.1rem;
+            }
+        }
+
+        &-list {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 2rem;
+            justify-content: center;
+
+            @include respond(big-desktop) {
+                			// 1rem = 12px
+            }
+        
+            @include respond(tab-land) {
+                grid-template-columns: repeat(3,1fr);		// 1rem = 9px
+            }
+        
+            @include respond(tab-port) {
+                grid-template-columns: repeat(2,1fr);    	// 1rem = 8px
+                gap: 1rem;
+                row-gap: 2rem;
+            }
+        
+            @include respond(phone) {
+                
+            }
+        }
+    }
+}
